@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<file id="stream" version="1.0">
+<dataSource>
+   GENERIC
+</dataSource>
+<domainInfo>
+  <variableNames>
+     time    time
+        lon     lon
+        lat     lat
+  </variableNames>
+  <filePath>
+     %SST_DIR%
+  </filePath>
+  <fileNames>
+     %SST_FILE%
+  </fileNames>
+</domainInfo>
+<fieldInfo>
+   <variableNames>
+     SST_cpl t
+   </variableNames>
+   <filePath>
+     %SST_DIR%
+   </filePath>
+   <fileNames>
+     %SST_FILE%
+   </fileNames>
+   <offset>
+      0
+   </offset>
+</fieldInfo>
+</file>
