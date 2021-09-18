@@ -1,6 +1,6 @@
 # README #
 
-This repo is for running aquaplanet simulations with CESM on Cheyenne.
+This repo is for running aquaplanet and drycore simulations with CESM on Cheyenne.
 
 **Initialize**
 
