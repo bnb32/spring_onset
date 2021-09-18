@@ -2,7 +2,11 @@
 
 This repo is for running aquaplanet simulations with CESM on Cheyenne.
 
+**Initialize**
+
 Run `pip install -e .`
+
+Run `bash go.sh`
 
 **Environment**
 
