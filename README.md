@@ -2,17 +2,19 @@
 
 This repo is for running aquaplanet simulations with CESM on Cheyenne.
 
+Run `pip install -e .`
+
 **Environment**
 
-Environment variables are defined in `environment.py`.
+Environment variables are defined in `idealplanets/environment.py`.
 
 **Preprocessing**
 
-`preprocessing/inject_anomaly.py` is used to inject a heat anomaly or change in phi into an sst file or topo file. This script can inject disk and band type heat anomalies. Parameters are specified through the command line using the `argparse` module.
+`idealplanets/preprocessing/inject_anomaly.py` is used to inject a heat anomaly or change in phi into an sst file or topo file. This script can inject disk and band type heat anomalies. Parameters are specified through the command line using the `argparse` module.
 
 **Postprocessing**
 
-`postprocessing/make_gif.py` and `postprocessing/plot_avg.py` are used to visualize output from the aquaplanet simulations.
+`idealplanets/postprocessing/make_gif.py` and `idealplanets/postprocessing/plot_avg.py` are used to visualize output from the aquaplanet simulations.
 
 **Simulation**
 

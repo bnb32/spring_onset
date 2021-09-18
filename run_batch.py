@@ -1,9 +1,9 @@
+import idealplanets.environment as env
+
 import argparse
 import os,sys
 import time
 import subprocess
-sys.path.append('./')
-import environment as env
 
 parser=argparse.ArgumentParser(description="Run Multiple Instances of CESM Pipeline")
 parser.add_argument('-case',default='aqua_anomaly')
@@ -24,7 +24,7 @@ case=args.case+'_'+args.anomaly_type+'_lat%s_lon%s'
 if args.sims:
     while args.anomaly_lat <= args.anomaly_lat_max:
 
-        pipeline_cmd='python ./run_pipeline.py -anomaly_type %s -anomaly_radius_squared %s -max_anomaly %s -anomaly_lat %s -anomaly_lon %s' %(args.anomaly_type,args.anomaly_radius_squared,args.max_anomaly,args.anomaly_lat,args.anomaly_lon)
+        pipeline_cmd='python %s/run_pipeline.py -anomaly_type %s -anomaly_radius_squared %s -max_anomaly %s -anomaly_lat %s -anomaly_lon %s' %(env.MAIN_DIR,args.anomaly_type,args.anomaly_radius_squared,args.max_anomaly,args.anomaly_lat,args.anomaly_lon)
         os.system(pipeline_cmd)
 
         args.anomaly_lat+=args.anomaly_lat_increment

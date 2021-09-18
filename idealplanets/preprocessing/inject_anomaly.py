@@ -1,17 +1,17 @@
+import idealplanets.environment as env
+
 import argparse
 import Nio
 import numpy as np
 import os
 import sys
-sys.path.append('/glade/u/home/bbenton/spring_onset/')
-sys.path.append('/glade/u/home/bbenton/spring_onset/preprocessing/')
-import environment as env
 
 parser=argparse.ArgumentParser(description="Inject Anomaly")
 parser.add_argument('-aqua',default=False,action='store_true')
 parser.add_argument('-drycore',default=False,action='store_true')
 parser.add_argument('-drycore_topo',default=False,action='store_true')
 parser.add_argument('-lapse_rate',default=False,action='store_true')
+parser.add_argument('-surface',default=False,action='store_true')
 parser.add_argument('-data_dir',default=env.CESM_DATA_DIR)
 parser.add_argument('-sst_file',default=env.BASE_SST_FILE)
 parser.add_argument('-topo_file',default=env.BASE_TOPO_FILE)

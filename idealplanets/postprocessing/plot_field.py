@@ -1,8 +1,7 @@
+import idealplanets.environment as env
+
 import os,sys
 import argparse
-sys.path.append('/glade/u/home/bbenton/spring_onset/')
-sys.path.append('/glade/u/home/bbenton/spring_onset/postprocessing/')
-import environment as env
 
 parser=argparse.ArgumentParser(description="Plot CESM field")
 parser.add_argument('-infile',required=True,type=str)
@@ -27,6 +26,9 @@ tmp=case_name.split('.cam')
 case_name=tmp[0]
 suffix='cam'+tmp[1]
 
+if "drycore" in case_name: args.drycore=True
+if "aqua" in case_name: args.aqua=True
+
 if args.drycore: 
     case_type="drycore"
 elif args.aqua: 
@@ -38,10 +40,7 @@ else:
 if args.control:
     case_name=case_type+"_control"
 
-if args.anomaly and not args.control:
-    args.outdir+="/%s_anomaly/" %(case_name)
-else:
-    args.outdir+="/%s/" %(case_name)
+args.outdir+="/%s/" %(case_name)
 
 base_sst_file="%s/%s"%(env.CESM_DATA_DIR,env.BASE_SST_FILE)
 base_tref_file="%s/%s"%(env.CESM_DATA_DIR,env.BASE_TREF_FILE)

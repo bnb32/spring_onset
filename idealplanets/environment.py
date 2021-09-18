@@ -1,8 +1,10 @@
+import os
+
 USERNAME="bbenton"
 PROJECT_CODE="UCOR0044"
 MAIN_DIR="/glade/u/home/"+USERNAME+"/spring_onset/"
-POST_PROC_DIR=MAIN_DIR+"/postprocessing/"
-PRE_PROC_DIR=MAIN_DIR+"/preprocessing/"
+POST_PROC_DIR=MAIN_DIR+"/idealplanets/postprocessing/"
+PRE_PROC_DIR=MAIN_DIR+"/idealplanets/preprocessing/"
 SCRATCH_DIR="/glade/scratch/"+USERNAME+"/"
 CIME_OUTPUT_ROOT=SCRATCH_DIR+"/cases/"
 CESM_DATA_DIR=SCRATCH_DIR+"/cesm_data/"
@@ -28,3 +30,5 @@ AQUA_COMPSET="QPC6"
 DRYCORE_RES="T85z30_T85_mg17"
 #DRYCORE_RES="f09z30_f09_mg17"
 DRYCORE_COMPSET="FHS94"
+
+os.environ["PATH"]+=":%s"%env.CESM_SCRIPTS

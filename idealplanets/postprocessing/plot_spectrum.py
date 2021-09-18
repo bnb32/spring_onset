@@ -1,7 +1,7 @@
+import idealplanets.environment as env
+
 import os,sys
 import argparse
-sys.path.append('../')
-import environment as env
 
 parser=argparse.ArgumentParser(description="Plot CESM Spectrum")
 parser.add_argument('-infile',required=True,type=str)

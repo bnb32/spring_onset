@@ -14,7 +14,10 @@ f = addfile(infile,"r")
 if (case_type.eq."drycore").and.(CONTROL.ne."True") then
   f1 = addfile(base_tref_file,"r")
   f2 = addfile(anomaly_file,"r")
-  anomaly = (f2->tref(0,0,:,:))-(f1->tref(0,0,:,:))
+  tref2 = f2->tref
+  tref1 = f1->tref
+  dims=dimsizes(tref2)
+  anomaly = tref2(0,dims(1)-1,:,:)-tref1(0,dims(1)-1,:,:)
   copy_VarCoords(f1->tref(0,0,:,:),anomaly)
   
 end if
@@ -128,8 +131,9 @@ else
 
 end if
 
-dims = dimsizes(tmp)
+dims := dimsizes(tmp)
 rank = dimsizes(dims)
+
 
 if (ANOMALY.eq."True").and.(CONTROL.ne."True") then
   do i=0,dims(1)-1
@@ -155,6 +159,10 @@ if (AVG.eq."True") then
 else
   outname=outdir+field+"_"+level+"_"+case_name
 end if
+
+if (ANOMALY.eq."True") then
+  outname=outname+"_anomaly"
+end if  
 
 res                      = True
 res@gsnMaximize          = True
@@ -192,8 +200,8 @@ res@cnLevelSpacingF = 0.5*res@cnLevelSpacingF
 mapres = True
 mapres@gsnMaximize          = True
 mapres@cnLineLabelsOn       = False
-;mapres@cnLevelSelectionMode = "ManualLevels"
-mapres@cnLevelSelectionMode = "AutomaticLevels"
+mapres@cnLevelSelectionMode = "ManualLevels"
+;mapres@cnLevelSelectionMode = "AutomaticLevels"
 mapres@gsnPaperOrientation  = "portrait"
 mapres@cnConstFEnableFill = False
 mapres@cnConstFLabelOn = False
@@ -214,7 +222,7 @@ end if
 mapres@cnMinLevelValF = minVal
 mapres@cnMaxLevelValF = maxVal
 mapres@cnLevelSpacingF = maxVal-minVal
-;symMinMaxPlt( (/ minVal,maxVal /), 1, True, mapres)
+symMinMaxPlt( (/ minVal,maxVal /), 1, True, mapres)
 ;mapres@cnLevelSpacingF = 0.5*mapres@cnLevelSpacingF
 
 if (rank.eq.3) then

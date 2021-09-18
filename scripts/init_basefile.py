@@ -1,5 +1,6 @@
+import idealplanets.environment as env
+
 import Nio,os
-import environment as env
 import argparse
 import numpy as np
 

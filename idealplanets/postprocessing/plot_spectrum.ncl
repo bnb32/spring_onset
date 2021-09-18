@@ -126,6 +126,10 @@ end if
 
 outname=outdir+field+"_avg_spectrum_"+level+"_"+case_name
 
+if (ANOMALY.eq."True") then
+  outname=outname+"_anomaly"
+end if  
+
 res = True
 res@tiXAxisString = "wave number"
 res@gsnScale = True               
