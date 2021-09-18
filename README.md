@@ -2,15 +2,15 @@
 
 This repo is for running aquaplanet and drycore simulations with CESM on Cheyenne.
 
+**Environment**
+
+Environment variables are defined in `idealplanets/environment.py`.
+
 **Initialize**
 
 Run `pip install -e .`
 
 Run `bash go.sh`
-
-**Environment**
-
-Environment variables are defined in `idealplanets/environment.py`.
 
 **Preprocessing**
 
