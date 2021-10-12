@@ -8,9 +8,10 @@ Environment variables are defined in `idealplanets/environment.py`.
 
 **Initialize**
 
-Run `pip install -e .`
-
-Run `bash go.sh`
+```bash
+pip install -e .
+bash go.sh
+```
 
 **Preprocessing**
 
@@ -31,8 +32,9 @@ Run `bash go.sh`
 `run_batch.py` can be used to run multiple CESM instances at the same time.
 
 Need cesm source in `../my_cesm`
-`git clone https://github.com/escomp/cesm.git my_cesm`
-`cd my_cesm`
-`git checkout release-cesm_2.0.0`
-`./manage_externals/checkout_externals` 
-
+```bash
+git clone https://github.com/escomp/cesm.git my_cesm
+cd my_cesm
+git checkout release-cesm_2.0.0
+./manage_externals/checkout_externals
+```
