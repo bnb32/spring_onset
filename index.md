@@ -2,40 +2,49 @@
 
 ### Installation
 
+**Environment**
+
+Environment variables are defined in `idealplanets/environment.py`.
+
+**Initialize**
+
+```bash
+pip install -e .
+bash go.sh
+```
+
+Need cesm source in `../my_cesm`
+```bash
+git clone https://github.com/escomp/cesm.git my_cesm
+cd my_cesm
+git checkout release-cesm_2.0.0
+./manage_externals/checkout_externals
+```
+
 ### Code
 
 #### Preprocessing
 
+`idealplanets/preprocessing/inject_anomaly.py` is used to inject a heat anomaly or change in phi into an sst file or topo file. This script can inject disk and band type heat anomalies. Parameters are specified through the command line using the `argparse` module.
+
 #### Postprocessing
+
+`idealplanets/postprocessing/plot_field.py` is used to visualize output from the aquaplanet simulations.
+
+#### Simulation
+
+`.F90` files from `cesm_mods` need to be copied into `$CASEDIR/SourceMods/src.cam` and `namelist_definition.xml` needs to be in `$CESM/components/cam/bld/namelist_files/`
+
+`run_cesm.py` runs the aquaplanet/drycore simulation using parameters specified through the `argparse` module.
+
+`run_pipeline.py` injects a heat anomaly, runs the aquaplanet simulation, and can run both visualization scripts. Parameters are again specified through the `argparse` module. 
+
+`run_batch.py` can be used to run multiple CESM instances at the same time.
 
 ### Usage
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Run the pipeline with `run_pipeline.py`. For example:
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bnb32/spring_onset/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+python run_pipeline.py -anomaly_lat 20.0 -anomaly_type disk -aqua -rebuild
+```
