@@ -47,8 +47,8 @@
 <li class="toctree-l1"><a class="reference internal" href="begginers_guide.html">Beginner’s Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/index.html">Examples</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Code Structure</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#idealplanet-structure">Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preprocessing">Preprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#postprocessing">Postprocessing</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="modules/index.html">Components</a></li>
@@ -110,9 +110,9 @@
 </style>
 <section id="idealplanet-s-code-structure">
 <h1>Code Structure<a class="headerlink" href="#idealplanet-s-code-structure" title="Permalink to this headline"></a></h1>
-<p>This page briefly shows the general order in which Idealplanet's modules are called when running the code.</p>
+<p>This page briefly describes the Idealplanet main components.</p>
 <section id="idealplanet-structure">
-<h2>Idealplanet Structure<a class="headerlink" href="#idealplanet-structure" title="Permalink to this headline"></a></h2>
+<h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline"></a></h2>
 <p>For ease and accessibility, Isca is controlled using a python interface which sets up the experiment runs, e.g. <code class="docutils literal notranslate"><span class="pre">frierson_test_case.py</span></code>. This then calls the atmosphere model (<code class="docutils literal notranslate"><span class="pre">atmos_model.F90</span></code>) which essentially just controls the model run, calling the atmosphere module (<code class="docutils literal notranslate"><span class="pre">atmosphere.F90</span></code>) every timestep. This module in turn calls the physical parameterisations from the physics driver (usually <code class="docutils literal notranslate"><span class="pre">idealized_moist_phys.F90</span></code>), the spectral dynamical core (<code class="docutils literal notranslate"><span class="pre">spectral_dynamics.F90</span></code>) and the vertical coordinate driver (<code class="docutils literal notranslate"><span class="pre">press_and_geopot.F90</span></code>). Most of the lower layer code, which is where the Isca’s many different options are located, is called from the physics driver. This includes radiation schemes, convection schemes, damping and diffusion.</p>
 <p>Note: If using grey radiation, the surface flux is calculated after the up sweep in the grey radiation code, but before the down sweep. In addition for any configuration, the mixed layer ocean code is called after the down sweep in the vertical diffusion code, but before the up sweep.</p>
 <figure class="align-default" id="id1">
@@ -122,18 +122,9 @@
 </figcaption>
 </figure>
 </section>
-<section id="comparison-to-a-general-spectral-model">
-<h2>Comparison To A General Spectral Model<a class="headerlink" href="#comparison-to-a-general-spectral-model" title="Permalink to this headline"></a></h2>
-<p>Our comparison here is based on the 2006 release of the GDFL CM2 spectral model. Because these models have an atmosphere ocean coupler, the model runs in a different, and slightly more complicated way. Note the multiple loops that the code must run through to do an up and down sweep. In Isca, because the mixed layer ocean is defined on that atmosphere grid, we can avoid these steps, meaning the model is easier to understand and use.</p>
-<figure class="align-default" id="id2">
-<a class="reference internal image-reference" href="_images/other_model_structure_diagram.png"><img alt="_images/other_model_structure_diagram.png" src="_images/other_model_structure_diagram.png" style="width: 563.2px; height: 394.6px;" /></a>
-<figcaption>
-<p><span class="caption-text">Flowchart showing the order of modules in a ‘normal’ GCM. Note this is a simplification of the call structure, as the subsequent parameterisations are not included here.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-</section>
-<section id="authors">
-<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline"></a></h2>
+
+<section id="Postprocessing">
+<h2>Postprocessing<a class="headerlink" href="#postprocessing" title="Permalink to this headline"></a></h2>
 <p>This documentation was written by Ross Castle and reviewed by Penelope Maher and Stephen Thomson.</p>
 </section>
 </section>
