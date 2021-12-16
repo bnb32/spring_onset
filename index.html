@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Overview &mdash; isca dev documentation</title>
+  <title>Overview &mdash; Aquaplanet & Drycore simulation documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
@@ -28,7 +28,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="#" class="icon icon-home"> isca
+            <a href="#" class="icon icon-home"> Aquaplanet & Drycore Simulation Guide
           </a>
               <div class="version">
                 dev
@@ -43,14 +43,14 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="begginers_guide.html">Isca Beginner’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="begginers_guide.html">Aquaplanet & Drycore Simulation Beginner’s Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/index.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="isca_structure.html">Isca’s Code Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules/index.html">Components of Isca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="idealplanet_structure.html">Code Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/index.html">Components</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributor’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="testing/index.html">Testing Isca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing/index.html">Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="remote_access.html">Remote Access</a></li>
 </ul>
@@ -61,7 +61,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">isca</a>
+          <a href="#">Aquaplanet & Drycore Simulation </a>
       </nav>
 
       <div class="wy-nav-content">
@@ -106,10 +106,10 @@
 <section id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h1>
 <p>Welcome to Isca!
-On this page and those following you will find the documentation to help you understand and run Isca. You can find a briefer and more general overview <a class="reference external" href="https://execlim.github.io/IscaWebsite/">here</a> and the code itself is on <a class="reference external" href="https://github.com/ExeClim/Isca">github</a>.</p>
+On this page and those following you will find the documentation to help you understand and run Aquaplanet & Drycore Simulations. You can find a briefer and more general overview <a class="reference external" href="https://execlim.github.io/IscaWebsite/">here</a> and the code itself is on <a class="reference external" href="https://github.com/ExeClim/Isca">github</a>.</p>
 <section id="about-isca">
-<h2>About Isca<a class="headerlink" href="#about-isca" title="Permalink to this headline"></a></h2>
-<p>Isca is a framework for the construction of models of the global circulation of the atmosphere of Earth and other planets at varying levels of realism and complexity.  The framework uses the dynamical core and the software infrastructure (FMS, for Flexible Modeling System) from the Geophysical Fluid Dynamics Laboratory in Princeton, USA, and some of the physical parameterizations are also taken from there.  Isca itself is not a single model, nor is it intended to provide a fully ‘comprehensive’ model capable of weather forecasts or climate projections for policy use. Rather, our intent is to take the idea of a model hierarchy seriously and thereby enable the user to make appropriate models for the problem at hand, or to make a connected and traceable sequence of models with feedbacks and processes included or denied as appropriate, ranging from the very simple to the near comprehensive.</p>
+<h2>About Idealplanets<a class="headerlink" href="#about-idealplanets" title="Permalink to this headline"></a></h2>
+<p>Idealplanets is a framework for the simulation of aquaplanets and drycore planets using CESM.</p>
 <figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="_images/index_fig_marspv.gif"><img alt="_images/index_fig_marspv.gif" src="_images/index_fig_marspv.gif" style="width: 248.0px; height: 261.2px;" /></a>
 <figcaption>
@@ -200,35 +200,7 @@ On this page and those following you will find the documentation to help you und
 </figure>
 </section>
 </section>
-<section id="how-to-cite-isca">
-<h2>How to cite Isca<a class="headerlink" href="#how-to-cite-isca" title="Permalink to this headline"></a></h2>
-<div class="line-block">
-<div class="line">The primary reference for Isca, and the one that should be cited if you use it, is:</div>
-<div class="line">Vallis, G.K., Colyer, G., Geen, R., Gerber, E., Jucker, M., Maher, P., Paterson, A., Pietschnig, M., Penn, J. and Thomson, S.I., 2018. Isca, v1. 0: A framework for the global modelling of the atmospheres of Earth and other planets at varying levels of complexity.  <em>Geosci. Model Dev.</em>, 11, 843–859.</div>
-<div class="line"><br /></div>
-<div class="line">In addition, if you use particular aspects of Isca please consider referencing one of the following papers:</div>
-<div class="line"><br /></div>
-<div class="line">For use of the SOCRATES radiation scheme:</div>
-<div class="line">Thomson, S.I. Vallis, G.K., 2019. The effects of gravity on the climate and circulation of a terrestrial planet. <em>Quarterly Journal of the Royal Meteorological Society</em>, 145, pp. 2627–2640.</div>
-<div class="line"><br /></div>
-<div class="line">To emphasize the hierarchical aspects of Isca, or if using the Mars, Jupiter or shallow water models:</div>
-<div class="line">Thomson, S.I. and Vallis, G.K., 2019. Hierarchical Modeling of Solar System Planets with Isca. <em>Atmosphere,</em> 10, p.803.</div>
-<div class="line"><br /></div>
-<div class="line">For a general discussion of the value of a hierarchical approach:</div>
-<div class="line">Maher, P., Gerber, E.P., Medeiros, B., Merlis, T.M., Sherwood, S., Sheshadri, A., Sobel, A.H., Vallis, G.K., Voigt, A. and Zurita‐Gotor, P., 2019. Model hierarchies for understanding atmospheric circulation. <em>Rev. Geophysics,</em> 57, pp.250-280.</div>
-<div class="line"><br /></div>
-<div class="line">For a simple surface model:</div>
-<div class="line">Pietschnig, M., Lambert, F.H., Saint‐Lu, M. and Vallis, G.K., 2019. The presence of Africa and limited soil moisture contribute to future drying of South America. <em>Geophysical Research Letters,</em> 46(21), pp.12445-12453.</div>
-<div class="line"><br /></div>
-<div class="line">For examples of different land configurations:</div>
-<div class="line">Geen, R., Lambert, F.H. and Vallis, G.K., 2018. Regime change behavior during Asian monsoon onset. <em>Journal of Climate,</em> 31(8), pp.3327-3348.</div>
-<div class="line"><br /></div>
-<div class="line">For the MiMA configuration of Isca, with the RRTM radiation scheme:</div>
-<div class="line">Jucker, M. and Gerber, E.P., 2017. Untangling the annual cycle of the tropical tropopause layer with an idealized moist model. <em>Journal of Climate,</em> 30(18), pp.7339-7358.</div>
-<div class="line"><br /></div>
-<div class="line">For exoplanets:</div>
-<div class="line">Penn, J. and Vallis, G.K., 2018. Atmospheric Circulation and Thermal Phase-curve Offset of Tidally and Nontidally Locked Terrestrial Exoplanets. <em>The Astrophysical Journal,</em> 868(2), p.147.</div>
-</div>
+
 </section>
 </section>
 <section id="contents">
@@ -236,14 +208,14 @@ On this page and those following you will find the documentation to help you und
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="begginers_guide.html">Isca Beginner’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="begginers_guide.html">Beginner’s Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/index.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="isca_structure.html">Isca’s Code Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules/index.html">Components of Isca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="idealplanets_structure.html">Code Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/index.html">Components</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributor’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="testing/index.html">Testing Isca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing/index.html">Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="remote_access.html">Remote Access</a></li>
 </ul>
@@ -252,8 +224,8 @@ On this page and those following you will find the documentation to help you und
 <section id="see-also">
 <h1>See also<a class="headerlink" href="#see-also" title="Permalink to this headline"></a></h1>
 <ul class="simple">
-<li><p>Isca <a class="reference external" href="https://execlim.github.io/IscaWebsite">home page</a></p></li>
-<li><p>Isca v1.0 model description: <a class="reference internal" href="references.html#vallisetal2018" id="id2"><span>[VallisEtAl2018]</span></a></p></li>
+<li><p>Idealplanets <a class="reference external" href="https://bnb32.github.io/spring_onset">home page</a></p></li>
+<li><p>Idealplanets v1.0 model description: <a class="reference internal" href="references.html#vallisetal2018" id="id2"><span>[VallisEtAl2018]</span></a></p></li>
 </ul>
 </section>
 <section id="license">
@@ -278,7 +250,7 @@ On this page and those following you will find the documentation to help you und
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, the Isca development team.</p>
+    <p>&#169; Copyright 2021, the ECRL development team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
