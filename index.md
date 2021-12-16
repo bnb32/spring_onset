@@ -45,6 +45,6 @@ git checkout release-cesm_2.0.0
 
 Run the pipeline with `run_pipeline.py`. For example:
 
-```python
+```bash
 python run_pipeline.py -anomaly_lat 20.0 -anomaly_type disk -aqua -rebuild
 ```
