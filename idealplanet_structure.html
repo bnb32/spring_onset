@@ -44,19 +44,18 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="begginers_guide.html">Isca Beginner’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="begginers_guide.html">Beginner’s Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/index.html">Examples</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Isca’s Code Structure</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#isca-structure">Isca Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#comparison-to-a-general-spectral-model">Comparison To A General Spectral Model</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Code Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#idealplanet-structure">Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#authors">Authors</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="modules/index.html">Components of Isca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/index.html">Components</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributor’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="testing/index.html">Testing Isca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing/index.html">Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="remote_access.html">Remote Access</a></li>
 </ul>
@@ -77,7 +76,7 @@
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
       <li>Isca’s Code Structure</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/isca_structure.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/idealplanet_structure.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -109,11 +108,11 @@
     text-align: unset;
 }
 </style>
-<section id="isca-s-code-structure">
-<h1>Isca’s Code Structure<a class="headerlink" href="#isca-s-code-structure" title="Permalink to this headline"></a></h1>
-<p>This page briefly shows the general order in which Isca’s modules are called when running the code. It would be too complicated to show every single Fortran file, and the exact formulation would be different depending on the model configuration. As Isca is structured a little differently to other spectral climate models, we show a more general description of a spectral model at the end of this page.</p>
-<section id="isca-structure">
-<h2>Isca Structure<a class="headerlink" href="#isca-structure" title="Permalink to this headline"></a></h2>
+<section id="idealplanet-s-code-structure">
+<h1>Code Structure<a class="headerlink" href="#idealplanet-s-code-structure" title="Permalink to this headline"></a></h1>
+<p>This page briefly shows the general order in which Idealplanet's modules are called when running the code.</p>
+<section id="idealplanet-structure">
+<h2>Idealplanet Structure<a class="headerlink" href="#idealplanet-structure" title="Permalink to this headline"></a></h2>
 <p>For ease and accessibility, Isca is controlled using a python interface which sets up the experiment runs, e.g. <code class="docutils literal notranslate"><span class="pre">frierson_test_case.py</span></code>. This then calls the atmosphere model (<code class="docutils literal notranslate"><span class="pre">atmos_model.F90</span></code>) which essentially just controls the model run, calling the atmosphere module (<code class="docutils literal notranslate"><span class="pre">atmosphere.F90</span></code>) every timestep. This module in turn calls the physical parameterisations from the physics driver (usually <code class="docutils literal notranslate"><span class="pre">idealized_moist_phys.F90</span></code>), the spectral dynamical core (<code class="docutils literal notranslate"><span class="pre">spectral_dynamics.F90</span></code>) and the vertical coordinate driver (<code class="docutils literal notranslate"><span class="pre">press_and_geopot.F90</span></code>). Most of the lower layer code, which is where the Isca’s many different options are located, is called from the physics driver. This includes radiation schemes, convection schemes, damping and diffusion.</p>
 <p>Note: If using grey radiation, the surface flux is calculated after the up sweep in the grey radiation code, but before the down sweep. In addition for any configuration, the mixed layer ocean code is called after the down sweep in the vertical diffusion code, but before the up sweep.</p>
 <figure class="align-default" id="id1">
