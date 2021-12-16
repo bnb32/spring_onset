@@ -3,8 +3,8 @@ import os,sys
 import time
 import datetime
 import subprocess
-sys.path.append('/glade/u/home/bbenton/spring_onset/')
-import environment as env
+
+import idealplanets.environment
 
 parser=argparse.ArgumentParser(description="Run CESM pipeline")
 parser.add_argument('-anomaly_lat',type=float,default=30.0)
