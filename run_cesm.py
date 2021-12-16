@@ -1,6 +1,6 @@
 import os
 import argparse
-import environment as env
+import idealplanets.environment as env
 
 os.environ["PATH"]+=":%s"%env.CESM_SCRIPTS
 
