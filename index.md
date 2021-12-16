@@ -25,7 +25,7 @@ git checkout release-cesm_2.0.0
 
 ### Preprocessing
 
-$idealplanets/preprocessing/inject_anomaly.py$ is used to inject a heat anomaly or change in phi into an sst file or topo file. This script can inject disk and band type heat anomalies. Parameters are specified through the command line using the `argparse` module.
+``idealplanets/preprocessing/inject_anomaly.py`` is used to inject a heat anomaly or change in phi into an sst file or topo file. This script can inject disk and band type heat anomalies. Parameters are specified through the command line using the `argparse` module.
 
 ### Postprocessing
 
