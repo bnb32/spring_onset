@@ -13,13 +13,14 @@ pip install -e .
 bash go.sh
 ```
 
-Need cesm source in `../my_cesm`
+Need cesm source in `<MY_CESM_DIR>` (definied in `environment.py`)
 ```bash
-git clone https://github.com/escomp/cesm.git my_cesm
-cd my_cesm
+git clone https://github.com/escomp/cesm.git <MY_CESM_DIR>
+cd <MY_CESM_DIR>
 git checkout release-cesm_2.0.0
 ./manage_externals/checkout_externals
 ```
+This can also be done with `python scripts/init_cesm.py`
 
 ## Code
 
