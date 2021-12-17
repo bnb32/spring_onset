@@ -20,8 +20,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Isca’s Code Structure" href="../isca_structure.html" />
-    <link rel="prev" title="Isca Beginner’s Guide" href="../begginers_guide.html" /> 
+    <link rel="next" title="Code Structure" href="../idealplanets_structure.html" />
+    <link rel="prev" title="Beginner’s Guide" href="../begginers_guide.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -29,7 +29,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> isca
+            <a href="../index.html" class="icon icon-home"> Idealplanets
           </a>
               <div class="version">
                 dev
@@ -44,18 +44,11 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../begginers_guide.html">Isca Beginner’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../begginers_guide.html">Beginner’s Guide</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Examples</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../isca_structure.html">Isca’s Code Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules/index.html">Components of Isca</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python.html">Python API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributor’s Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../testing/index.html">Testing Isca</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../remote_access.html">Remote Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../idealplanets_structure.html">Code Structure</a></li>
 </ul>
 
         </div>
@@ -64,7 +57,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">isca</a>
+          <a href="../index.html">Idealplanets</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -108,7 +101,12 @@
 </style>
 <section id="examples">
 <span id="id1"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h1>
-<p>Here are few examples on how to run Isca and analyse its output.</p>
+<p>Here are few examples on how to run Aquaplanets & Drycore simulations and analyse the output.</p>
+
+<p>Running an aquaplanet simulation with a disk type anomaly:</p>
+<div class="highlight-python3 notranslate"><div class="highlight">
+<pre><span></span><span class="n">python</span> <span class="n">run_pipeline.py</span> <span class="n">-anomaly_type</span><span class="p"> disk</span><span class="o"> -aqua</span><span class="n"> -anomaly_lat 20.0</span>
+</pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>These examples provide practical ways to illustrate the usage of the software, and do not necessarily represent the best scientific methods for any particular type of study.</p>
@@ -121,14 +119,14 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../begginers_guide.html" class="btn btn-neutral float-left" title="Isca Beginner’s Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../isca_structure.html" class="btn btn-neutral float-right" title="Isca’s Code Structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../begginers_guide.html" class="btn btn-neutral float-left" title="Beginner’s Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../idealplanets_structure.html" class="btn btn-neutral float-right" title="Code Structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, the Isca development team.</p>
+    <p>&#169; Copyright 2021, the ECRL development team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
