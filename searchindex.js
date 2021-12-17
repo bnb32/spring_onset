@@ -1,1 +1,0 @@
-Search.setIndex({docnames:["examples/index","index","install","idealplanets_structure"],objects:{},objnames:{},objtypes:{}})
