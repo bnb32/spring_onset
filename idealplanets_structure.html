@@ -92,16 +92,16 @@
 <section id="idealplanet-s-code-structure">
 <h1>Code Structure<a class="headerlink" href="#idealplanet-s-code-structure" title="Permalink to this headline"></a></h1>
 <p>This page briefly describes the Idealplanets main components.</p>
-<section id="idealplanets-structure">
+<section id="preprocessing">
 <h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline"></a></h2>
 <p><code>idealplanets/preprocessing/inject_anomaly.py</code> is used to inject a heat anomaly or change in phi into an sst file or topo file. This script can inject disk and band type heat anomalies. Parameters are specified through the command line using the <code>argparse</code> module.</p>
 </section>
 
-<section id="Postprocessing">
+<section id="postprocessing">
 <h2>Postprocessing<a class="headerlink" href="#postprocessing" title="Permalink to this headline"></a></h2>
 <p><code>idealplanets/postprocessing/plot_field.py</code> is used to visualize output from the aquaplanet simulations.</p>
 </section>
-<section id="Simulation">
+<section id="simulation">
 <h2>Simulation<a class="headerlink" href="#simulation" title="Permalink to this headline"></a></h2>
 <p>
 <code>.F90</code> files from <code>cesm_mods</code> need to be copied into <code>$CASEDIR/SourceMods/src.cam</code> and <code>namelist_definition.xml</code> needs to be in <code>$CESM/components/cam/bld/namelist_files/</code><br>
