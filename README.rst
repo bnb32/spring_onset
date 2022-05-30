@@ -4,6 +4,10 @@ Idealplanets
 
 This repo is for running aquaplanet and drycore simulations with CESM on Cheyenne.
 
+Documentation
+*************
+`<https://bnb32.github.io/spring_onset/>`_
+
 Installation
 ************
 
@@ -19,12 +23,14 @@ Configuration can be in either .py or .json format. Follow the required
 variables from config.py. Easiest is just to edit the my_config.py file and
 not convert to json.
 
-Install package:
+Initialization
+**************
+
+After following the installation instructions `here <https://bnb32.github.io/spring_onset/install.html>`_:
 
 .. code-block:: bash
 
     cd spring_onset
-    pip install -e .
     bash ./go.sh
 
 This go script kicks off scripts from the scripts directory and requires
