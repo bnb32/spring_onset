@@ -8,8 +8,10 @@ Documentation
 *************
 `<https://bnb32.github.io/spring_onset/>`_
 
-Installation
-************
+Initialization
+**************
+
+After following the installation instructions `here <https://bnb32.github.io/spring_onset/install.html>`_:
 
 Edit environment configuration:
 
@@ -22,11 +24,6 @@ Edit environment configuration:
 Configuration can be in either .py or .json format. Follow the required
 variables from config.py. Easiest is just to edit the my_config.py file and
 not convert to json.
-
-Initialization
-**************
-
-After following the installation instructions `here <https://bnb32.github.io/spring_onset/install.html>`_:
 
 .. code-block:: bash
 
