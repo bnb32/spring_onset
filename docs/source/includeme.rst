@@ -1,0 +1,3 @@
+ECRLGCM
+*******
+.. include:: ../../README.rst

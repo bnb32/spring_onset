@@ -1,0 +1,13 @@
+pygeos
+matplotlib
+numpy
+xarray
+proj
+pop-tools
+netCDF4
+metpy
+tqdm
+sphinx-argparse
+joblib
+f90nml
+pynio @ https://github.com/ncar/pynio.git
