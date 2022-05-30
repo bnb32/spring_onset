@@ -48,7 +48,7 @@ setup(
     description="Run simplified planet climate models with forcing injections",
     long_description=readme,
     author="Brandon Benton",
-    url="https://github.com/bnb32/SpringOnset.git",
+    url="https://github.com/bnb32/spring_onset.git",
     packages=find_packages(),
     package_dir={"idealplanets": "idealplanets"},
     include_package_data=True,
