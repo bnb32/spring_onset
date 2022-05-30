@@ -1,3 +1,3 @@
-ECRLGCM
-*******
+Idealplanets
+************
 .. include:: ../../README.rst
