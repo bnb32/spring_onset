@@ -10,4 +10,4 @@ tqdm
 sphinx-argparse
 joblib
 f90nml
-pynio @ https://github.com/ncar/pynio.git
+pynio @ git+https://github.com/ncar/pynio.git
