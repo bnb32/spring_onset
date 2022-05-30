@@ -1,0 +1,6 @@
+idealplanets.utilities.open\_file
+=================================
+
+.. currentmodule:: idealplanets.utilities
+
+.. autofunction:: open_file

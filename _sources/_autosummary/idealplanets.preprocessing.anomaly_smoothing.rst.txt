@@ -1,0 +1,6 @@
+idealplanets.preprocessing.anomaly\_smoothing
+=============================================
+
+.. currentmodule:: idealplanets.preprocessing
+
+.. autofunction:: anomaly_smoothing

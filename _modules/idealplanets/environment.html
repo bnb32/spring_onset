@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>idealplanets.environment &mdash; idealplanets v1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> idealplanets
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../includeme.html">Home page</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../includeme.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../includeme.html#initialization">Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../includeme.html#preprocessing">Preprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../includeme.html#postprocessing">Postprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../includeme.html#simulation">Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../_autosummary/idealplanets.html">API reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/idealplanets.cesm_argparse.html">idealplanets.cesm_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/idealplanets.init_basefile_argparse.html">idealplanets.init_basefile_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/idealplanets.init_cesm_argparse.html">idealplanets.init_cesm_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/idealplanets.inject_argparse.html">idealplanets.inject_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/idealplanets.plot_field_argparse.html">idealplanets.plot_field_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/idealplanets.plot_spectrum_argparse.html">idealplanets.plot_spectrum_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/idealplanets.plot_steadystate_argparse.html">idealplanets.plot_steadystate_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/idealplanets.run_batch_argparse.html">idealplanets.run_batch_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/idealplanets.run_cesm_pipeline_argparse.html">idealplanets.run_cesm_pipeline_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/idealplanets.environment.html">idealplanets.environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/idealplanets.environment.EnvironmentConfig.html">idealplanets.environment.EnvironmentConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/idealplanets.environment.config.html">idealplanets.environment.config</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/idealplanets.postprocessing.html">idealplanets.postprocessing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/idealplanets.postprocessing.find_steadystate.html">idealplanets.postprocessing.find_steadystate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/idealplanets.postprocessing.plot_field.html">idealplanets.postprocessing.plot_field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/idealplanets.postprocessing.plot_spectrum.html">idealplanets.postprocessing.plot_spectrum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/idealplanets.preprocessing.html">idealplanets.preprocessing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/idealplanets.preprocessing.anomaly_smoothing.html">idealplanets.preprocessing.anomaly_smoothing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/idealplanets.preprocessing.anomaly_value.html">idealplanets.preprocessing.anomaly_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/idealplanets.preprocessing.disk_anomaly_squared_distance.html">idealplanets.preprocessing.disk_anomaly_squared_distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/idealplanets.preprocessing.meridional_band_anomaly_squared_distance.html">idealplanets.preprocessing.meridional_band_anomaly_squared_distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/idealplanets.preprocessing.zonal_band_anomaly_squared_distance.html">idealplanets.preprocessing.zonal_band_anomaly_squared_distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/idealplanets.preprocessing.inject_anomaly.html">idealplanets.preprocessing.inject_anomaly</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/idealplanets.utilities.html">idealplanets.utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/idealplanets.utilities.open_file.html">idealplanets.utilities.open_file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/idealplanets.version.html">idealplanets.version</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/cmd.html">Command Line Use</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/cmd_init_basefile.html">Initialize basefile</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/cmd_init_basefile.html#Named Arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/cmd_init_cesm.html">Initialize CESM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/cmd_init_cesm.html#Named Arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/cmd_cesm.html">Run CESM simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/cmd_cesm.html#Named Arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/cmd_batch.html">Run CESM Batch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/cmd_batch.html#Named Arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/cmd_pipeline.html">Run CESM pipeline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/cmd_pipeline.html#Named Arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/cmd_spectrum.html">Plot CESM spectrum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/cmd_spectrum.html#Named Arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/cmd_steadystate.html">Plot CESM spectrum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/cmd_steadystate.html#Named Arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/cmd_field.html">Plot CESM field</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/cmd_field.html#Named Arguments">Named Arguments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/examples.html#run-simulations">Run Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/examples.html#visualization">Visualization</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">idealplanets</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+          <li><a href="../idealplanets.html">idealplanets</a> &raquo;</li>
+      <li>idealplanets.environment</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for idealplanets.environment</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Environment configuration&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">importlib.util</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+
+<div class="viewcode-block" id="EnvironmentConfig"><a class="viewcode-back" href="../../_autosummary/idealplanets.environment.EnvironmentConfig.html#idealplanets.environment.EnvironmentConfig">[docs]</a><span class="k">class</span> <span class="nc">EnvironmentConfig</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Class storing configuration parameters&quot;&quot;&quot;</span>
+
+    <span class="n">USERNAME</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">NETID</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">PROJECT_CODE</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">MAIN_DIR</span> <span class="o">=</span> <span class="s1">&#39;/tmp&#39;</span>
+
+    <span class="n">MY_CESM_DIR</span> <span class="o">=</span> <span class="n">MAIN_DIR</span> <span class="o">+</span> <span class="s1">&#39;/my_cesm&#39;</span>
+    <span class="n">POST_PROC_DIR</span> <span class="o">=</span> <span class="n">MAIN_DIR</span> <span class="o">+</span> <span class="s1">&#39;/idealplanets/postprocessing/&#39;</span>
+    <span class="n">PRE_PROC_DIR</span> <span class="o">=</span> <span class="n">MAIN_DIR</span> <span class="o">+</span> <span class="s1">&#39;/idealplanets/preprocessing/&#39;</span>
+    <span class="n">SCRATCH_DIR</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;/glade/scratch/</span><span class="si">{</span><span class="n">USERNAME</span><span class="si">}</span><span class="s1">/&#39;</span>
+    <span class="n">CIME_OUTPUT_ROOT</span> <span class="o">=</span> <span class="n">SCRATCH_DIR</span> <span class="o">+</span> <span class="s1">&#39;/cases/&#39;</span>
+    <span class="n">CESM_DATA_DIR</span> <span class="o">=</span> <span class="n">SCRATCH_DIR</span> <span class="o">+</span> <span class="s1">&#39;/cesm_data/&#39;</span>
+    <span class="n">CESM_SCRIPTS</span> <span class="o">=</span> <span class="n">MY_CESM_DIR</span> <span class="o">+</span> <span class="s1">&#39;/cime/scripts/&#39;</span>
+    <span class="n">CESM_CAM_OUT_DIR</span> <span class="o">=</span> <span class="n">SCRATCH_DIR</span> <span class="o">+</span> <span class="s1">&#39;/archive/</span><span class="si">%s</span><span class="s1">/atm/hist/&#39;</span>
+    <span class="n">ORIG_DATA_DIR</span> <span class="o">=</span> <span class="s1">&#39;/glade/p/cesmdata/cseg/inputdata/&#39;</span>
+    <span class="n">ORIG_TOPO_DIR</span> <span class="o">=</span> <span class="n">ORIG_DATA_DIR</span> <span class="o">+</span> <span class="s1">&#39;/atm/cam/topo/&#39;</span>
+    <span class="n">ORIG_TREF_DIR</span> <span class="o">=</span> <span class="n">MAIN_DIR</span> <span class="o">+</span> <span class="s1">&#39;/trefread/NCL/output/&#39;</span>
+    <span class="n">ORIG_SST_DIR</span> <span class="o">=</span> <span class="n">ORIG_DATA_DIR</span> <span class="o">+</span> <span class="s1">&#39;/ocn/docn7/AQUAPLANET/&#39;</span>
+    <span class="n">ORIG_TOPO_FILE</span> <span class="o">=</span> <span class="n">ORIG_TOPO_DIR</span> <span class="o">+</span> <span class="s1">&#39;/USGS-gtopo30_64x128_c050520.nc&#39;</span>
+    <span class="n">ORIG_TREF_FILE</span> <span class="o">=</span> <span class="n">ORIG_TREF_DIR</span> <span class="o">+</span> <span class="s1">&#39;/tref_T85L30.nc&#39;</span>
+    <span class="n">ORIG_SST_FILE</span> <span class="o">=</span> <span class="n">ORIG_SST_DIR</span> <span class="o">+</span> <span class="s1">&#39;/sst_c4aquasom_0.9x1.25_clim.c170512.nc&#39;</span>
+    <span class="n">BASE_SST_FILE</span> <span class="o">=</span> <span class="s1">&#39;aqua_sst.nc&#39;</span>
+    <span class="n">BASE_TOPO_FILE</span> <span class="o">=</span> <span class="s1">&#39;drycore_topo.nc&#39;</span>
+    <span class="n">BASE_TREF_FILE</span> <span class="o">=</span> <span class="s1">&#39;drycore_tref.nc&#39;</span>
+    <span class="n">AQUA_RES</span> <span class="o">=</span> <span class="s2">&quot;f09_f09_mg17&quot;</span>
+    <span class="n">AQUA_COMPSET</span> <span class="o">=</span> <span class="s2">&quot;QPC6&quot;</span>
+    <span class="n">DRYCORE_RES</span> <span class="o">=</span> <span class="s2">&quot;T85z30_T85_mg17&quot;</span>
+    <span class="n">DRYCORE_COMPSET</span> <span class="o">=</span> <span class="s2">&quot;FHS94&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        file_name : string</span>
+<span class="sd">            JSON or .py configuration file</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_name</span> <span class="o">=</span> <span class="n">file_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_config</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_env</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">init_dirs</span><span class="p">()</span>
+
+<div class="viewcode-block" id="EnvironmentConfig.load_config"><a class="viewcode-back" href="../../_autosummary/idealplanets.environment.EnvironmentConfig.html#idealplanets.environment.EnvironmentConfig.load_config">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">load_config</span><span class="p">(</span><span class="n">file_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Load config from python file&quot;&quot;&quot;</span>
+        <span class="n">spec</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">spec_from_file_location</span><span class="p">(</span><span class="s2">&quot;config&quot;</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
+        <span class="n">config</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">module_from_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="s2">&quot;config&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">config</span>
+        <span class="n">spec</span><span class="o">.</span><span class="n">loader</span><span class="o">.</span><span class="n">exec_module</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">config</span></div>
+
+<div class="viewcode-block" id="EnvironmentConfig.get_config"><a class="viewcode-back" href="../../_autosummary/idealplanets.environment.EnvironmentConfig.html#idealplanets.environment.EnvironmentConfig.get_config">[docs]</a>    <span class="k">def</span> <span class="nf">get_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get configuration from file</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        file_name : string</span>
+<span class="sd">            Path to configuration file</span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        RunConfig</span>
+<span class="sd">            Config class with run time configuration stored in attributes</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">file_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">file_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;py&#39;</span><span class="p">:</span>
+                <span class="n">config</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_config</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">config</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="n">k</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+                            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>
+            <span class="k">elif</span> <span class="n">file_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;json&#39;</span><span class="p">:</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">config_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fh</span><span class="p">)</span>
+
+                <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">config_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+                        <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="EnvironmentConfig.update_env"><a class="viewcode-back" href="../../_autosummary/idealplanets.environment.EnvironmentConfig.html#idealplanets.environment.EnvironmentConfig.update_env">[docs]</a>    <span class="k">def</span> <span class="nf">update_env</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Update path after loading config&quot;&quot;&quot;</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;PATH&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">CESM_SCRIPTS</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">d</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="n">d</span><span class="p">:</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">d</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="EnvironmentConfig.init_dirs"><a class="viewcode-back" href="../../_autosummary/idealplanets.environment.EnvironmentConfig.html#idealplanets.environment.EnvironmentConfig.init_dirs">[docs]</a>    <span class="k">def</span> <span class="nf">init_dirs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Make project directories&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">if</span> <span class="s1">&#39;DIR&#39;</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;mkdir -p </span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Brandon Benton.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

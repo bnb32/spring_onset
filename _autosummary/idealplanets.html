@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>idealplanets &mdash; idealplanets v1.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="idealplanets.cesm_argparse" href="idealplanets.cesm_argparse.html" />
+    <link rel="prev" title="Clone repo (recommended for developers)" href="../misc/install.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> idealplanets
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../includeme.html">Home page</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../includeme.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../includeme.html#initialization">Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../includeme.html#preprocessing">Preprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../includeme.html#postprocessing">Postprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../includeme.html#simulation">Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/install.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="idealplanets.cesm_argparse.html">idealplanets.cesm_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idealplanets.init_basefile_argparse.html">idealplanets.init_basefile_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idealplanets.init_cesm_argparse.html">idealplanets.init_cesm_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idealplanets.inject_argparse.html">idealplanets.inject_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idealplanets.plot_field_argparse.html">idealplanets.plot_field_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idealplanets.plot_spectrum_argparse.html">idealplanets.plot_spectrum_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idealplanets.plot_steadystate_argparse.html">idealplanets.plot_steadystate_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idealplanets.run_batch_argparse.html">idealplanets.run_batch_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idealplanets.run_cesm_pipeline_argparse.html">idealplanets.run_cesm_pipeline_argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idealplanets.environment.html">idealplanets.environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="idealplanets.environment.EnvironmentConfig.html">idealplanets.environment.EnvironmentConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idealplanets.environment.config.html">idealplanets.environment.config</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="idealplanets.postprocessing.html">idealplanets.postprocessing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="idealplanets.postprocessing.find_steadystate.html">idealplanets.postprocessing.find_steadystate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idealplanets.postprocessing.plot_field.html">idealplanets.postprocessing.plot_field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idealplanets.postprocessing.plot_spectrum.html">idealplanets.postprocessing.plot_spectrum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="idealplanets.preprocessing.html">idealplanets.preprocessing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="idealplanets.preprocessing.anomaly_smoothing.html">idealplanets.preprocessing.anomaly_smoothing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idealplanets.preprocessing.anomaly_value.html">idealplanets.preprocessing.anomaly_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idealplanets.preprocessing.disk_anomaly_squared_distance.html">idealplanets.preprocessing.disk_anomaly_squared_distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idealplanets.preprocessing.meridional_band_anomaly_squared_distance.html">idealplanets.preprocessing.meridional_band_anomaly_squared_distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idealplanets.preprocessing.zonal_band_anomaly_squared_distance.html">idealplanets.preprocessing.zonal_band_anomaly_squared_distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idealplanets.preprocessing.inject_anomaly.html">idealplanets.preprocessing.inject_anomaly</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="idealplanets.utilities.html">idealplanets.utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="idealplanets.utilities.open_file.html">idealplanets.utilities.open_file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="idealplanets.version.html">idealplanets.version</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/cmd.html">Command Line Use</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../misc/cmd_init_basefile.html">Initialize basefile</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../misc/cmd_init_basefile.html#Named Arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/cmd_init_cesm.html">Initialize CESM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../misc/cmd_init_cesm.html#Named Arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/cmd_cesm.html">Run CESM simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../misc/cmd_cesm.html#Named Arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/cmd_batch.html">Run CESM Batch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../misc/cmd_batch.html#Named Arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/cmd_pipeline.html">Run CESM pipeline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../misc/cmd_pipeline.html#Named Arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/cmd_spectrum.html">Plot CESM spectrum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../misc/cmd_spectrum.html#Named Arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/cmd_steadystate.html">Plot CESM spectrum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../misc/cmd_steadystate.html#Named Arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/cmd_field.html">Plot CESM field</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../misc/cmd_field.html#Named Arguments">Named Arguments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../misc/examples.html#run-simulations">Run Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/examples.html#visualization">Visualization</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">idealplanets</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>idealplanets</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/bnb32/idealplanets/blob/main/docs/source/_autosummary/idealplanets.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-idealplanets">
+<span id="idealplanets"></span><h1>idealplanets<a class="headerlink" href="#module-idealplanets" title="Permalink to this heading"></a></h1>
+<p>Idealplanets module</p>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="idealplanets.cesm_argparse.html#idealplanets.cesm_argparse" title="idealplanets.cesm_argparse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cesm_argparse</span></code></a>()</p></td>
+<td><p>Parse args for running cesm</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="idealplanets.init_basefile_argparse.html#idealplanets.init_basefile_argparse" title="idealplanets.init_basefile_argparse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_basefile_argparse</span></code></a>()</p></td>
+<td><p>Parse args for initializing basefiles which are used for injections</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="idealplanets.init_cesm_argparse.html#idealplanets.init_cesm_argparse" title="idealplanets.init_cesm_argparse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_cesm_argparse</span></code></a>()</p></td>
+<td><p>Parse args for initializing cesm</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="idealplanets.inject_argparse.html#idealplanets.inject_argparse" title="idealplanets.inject_argparse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inject_argparse</span></code></a>()</p></td>
+<td><p>Parse args for anomaly injection</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="idealplanets.plot_field_argparse.html#idealplanets.plot_field_argparse" title="idealplanets.plot_field_argparse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_field_argparse</span></code></a>()</p></td>
+<td><p>Parse args for field plot</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="idealplanets.plot_spectrum_argparse.html#idealplanets.plot_spectrum_argparse" title="idealplanets.plot_spectrum_argparse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_spectrum_argparse</span></code></a>()</p></td>
+<td><p>Parse args for spectrum plot</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="idealplanets.plot_steadystate_argparse.html#idealplanets.plot_steadystate_argparse" title="idealplanets.plot_steadystate_argparse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_steadystate_argparse</span></code></a>()</p></td>
+<td><p>Parse args for steadystate plot</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="idealplanets.run_batch_argparse.html#idealplanets.run_batch_argparse" title="idealplanets.run_batch_argparse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_batch_argparse</span></code></a>()</p></td>
+<td><p>Parse args for running multiple instances of cesm pipeline</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="idealplanets.run_cesm_pipeline_argparse.html#idealplanets.run_cesm_pipeline_argparse" title="idealplanets.run_cesm_pipeline_argparse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_cesm_pipeline_argparse</span></code></a>()</p></td>
+<td><p>Parse args for running cesm pipeline, including anomaly injection</p></td>
+</tr>
+</tbody>
+</table>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="idealplanets.environment.html#module-idealplanets.environment" title="idealplanets.environment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">idealplanets.environment</span></code></a></p></td>
+<td><p>Environment configuration</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="idealplanets.postprocessing.html#module-idealplanets.postprocessing" title="idealplanets.postprocessing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">idealplanets.postprocessing</span></code></a></p></td>
+<td><p>Postprocessing scripts</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="idealplanets.preprocessing.html#module-idealplanets.preprocessing" title="idealplanets.preprocessing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">idealplanets.preprocessing</span></code></a></p></td>
+<td><p>Preprocessing utilities</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="idealplanets.utilities.html#module-idealplanets.utilities" title="idealplanets.utilities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">idealplanets.utilities</span></code></a></p></td>
+<td><p>Utilities</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="idealplanets.version.html#module-idealplanets.version" title="idealplanets.version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">idealplanets.version</span></code></a></p></td>
+<td><p>Idealplanets Version</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../misc/install.html" class="btn btn-neutral float-left" title="Clone repo (recommended for developers)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="idealplanets.cesm_argparse.html" class="btn btn-neutral float-right" title="idealplanets.cesm_argparse" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Brandon Benton.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+idealplanets.plot\_spectrum\_argparse
+=====================================
+
+.. currentmodule:: idealplanets
+
+.. autofunction:: plot_spectrum_argparse

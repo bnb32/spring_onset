@@ -1,0 +1,49 @@
+﻿idealplanets
+============
+
+.. automodule:: idealplanets
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      cesm_argparse
+      init_basefile_argparse
+      init_cesm_argparse
+      inject_argparse
+      plot_field_argparse
+      plot_spectrum_argparse
+      plot_steadystate_argparse
+      run_batch_argparse
+      run_cesm_pipeline_argparse
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst
+   :recursive:
+
+   idealplanets.environment
+   idealplanets.postprocessing
+   idealplanets.preprocessing
+   idealplanets.utilities
+   idealplanets.version
+

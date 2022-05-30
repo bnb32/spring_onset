@@ -1,0 +1,6 @@
+idealplanets.plot\_field\_argparse
+==================================
+
+.. currentmodule:: idealplanets
+
+.. autofunction:: plot_field_argparse

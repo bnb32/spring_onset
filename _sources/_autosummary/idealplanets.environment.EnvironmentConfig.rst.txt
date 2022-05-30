@@ -1,0 +1,58 @@
+idealplanets.environment.EnvironmentConfig
+==========================================
+
+.. currentmodule:: idealplanets.environment
+
+.. autoclass:: EnvironmentConfig
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~EnvironmentConfig.get_config
+      ~EnvironmentConfig.init_dirs
+      ~EnvironmentConfig.load_config
+      ~EnvironmentConfig.update_env
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~EnvironmentConfig.AQUA_COMPSET
+      ~EnvironmentConfig.AQUA_RES
+      ~EnvironmentConfig.BASE_SST_FILE
+      ~EnvironmentConfig.BASE_TOPO_FILE
+      ~EnvironmentConfig.BASE_TREF_FILE
+      ~EnvironmentConfig.CESM_CAM_OUT_DIR
+      ~EnvironmentConfig.CESM_DATA_DIR
+      ~EnvironmentConfig.CESM_SCRIPTS
+      ~EnvironmentConfig.CIME_OUTPUT_ROOT
+      ~EnvironmentConfig.DRYCORE_COMPSET
+      ~EnvironmentConfig.DRYCORE_RES
+      ~EnvironmentConfig.MAIN_DIR
+      ~EnvironmentConfig.MY_CESM_DIR
+      ~EnvironmentConfig.NETID
+      ~EnvironmentConfig.ORIG_DATA_DIR
+      ~EnvironmentConfig.ORIG_SST_DIR
+      ~EnvironmentConfig.ORIG_SST_FILE
+      ~EnvironmentConfig.ORIG_TOPO_DIR
+      ~EnvironmentConfig.ORIG_TOPO_FILE
+      ~EnvironmentConfig.ORIG_TREF_DIR
+      ~EnvironmentConfig.ORIG_TREF_FILE
+      ~EnvironmentConfig.POST_PROC_DIR
+      ~EnvironmentConfig.PRE_PROC_DIR
+      ~EnvironmentConfig.PROJECT_CODE
+      ~EnvironmentConfig.SCRATCH_DIR
+      ~EnvironmentConfig.USERNAME
+   
+   

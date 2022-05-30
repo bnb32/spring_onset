@@ -1,0 +1,30 @@
+idealplanets.utilities
+======================
+
+.. automodule:: idealplanets.utilities
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      open_file
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

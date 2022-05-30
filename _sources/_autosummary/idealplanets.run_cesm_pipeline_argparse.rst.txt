@@ -1,0 +1,6 @@
+idealplanets.run\_cesm\_pipeline\_argparse
+==========================================
+
+.. currentmodule:: idealplanets
+
+.. autofunction:: run_cesm_pipeline_argparse

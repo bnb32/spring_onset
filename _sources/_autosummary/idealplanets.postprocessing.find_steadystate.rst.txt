@@ -1,0 +1,23 @@
+idealplanets.postprocessing.find\_steadystate
+=============================================
+
+.. automodule:: idealplanets.postprocessing.find_steadystate
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

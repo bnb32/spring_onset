@@ -1,0 +1,6 @@
+idealplanets.preprocessing.disk\_anomaly\_squared\_distance
+===========================================================
+
+.. currentmodule:: idealplanets.preprocessing
+
+.. autofunction:: disk_anomaly_squared_distance

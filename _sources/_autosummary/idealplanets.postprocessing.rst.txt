@@ -1,0 +1,32 @@
+idealplanets.postprocessing
+===========================
+
+.. automodule:: idealplanets.postprocessing
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst
+   :recursive:
+
+   idealplanets.postprocessing.find_steadystate
+   idealplanets.postprocessing.plot_field
+   idealplanets.postprocessing.plot_spectrum
+

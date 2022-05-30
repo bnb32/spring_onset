@@ -1,0 +1,6 @@
+idealplanets.init\_basefile\_argparse
+=====================================
+
+.. currentmodule:: idealplanets
+
+.. autofunction:: init_basefile_argparse

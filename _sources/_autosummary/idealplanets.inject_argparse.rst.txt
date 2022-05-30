@@ -1,0 +1,6 @@
+idealplanets.inject\_argparse
+=============================
+
+.. currentmodule:: idealplanets
+
+.. autofunction:: inject_argparse

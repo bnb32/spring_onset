@@ -1,0 +1,41 @@
+idealplanets.preprocessing
+==========================
+
+.. automodule:: idealplanets.preprocessing
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      anomaly_smoothing
+      anomaly_value
+      disk_anomaly_squared_distance
+      meridional_band_anomaly_squared_distance
+      zonal_band_anomaly_squared_distance
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst
+   :recursive:
+
+   idealplanets.preprocessing.inject_anomaly
+

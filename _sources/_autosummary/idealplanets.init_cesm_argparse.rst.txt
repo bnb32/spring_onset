@@ -1,0 +1,6 @@
+idealplanets.init\_cesm\_argparse
+=================================
+
+.. currentmodule:: idealplanets
+
+.. autofunction:: init_cesm_argparse

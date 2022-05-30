@@ -1,0 +1,6 @@
+idealplanets.preprocessing.anomaly\_value
+=========================================
+
+.. currentmodule:: idealplanets.preprocessing
+
+.. autofunction:: anomaly_value

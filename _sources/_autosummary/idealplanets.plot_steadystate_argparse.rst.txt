@@ -1,0 +1,6 @@
+idealplanets.plot\_steadystate\_argparse
+========================================
+
+.. currentmodule:: idealplanets
+
+.. autofunction:: plot_steadystate_argparse

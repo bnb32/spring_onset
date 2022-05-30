@@ -1,0 +1,6 @@
+idealplanets.run\_batch\_argparse
+=================================
+
+.. currentmodule:: idealplanets
+
+.. autofunction:: run_batch_argparse
