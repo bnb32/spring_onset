@@ -4,18 +4,32 @@ Idealplanets
 
 This repo is for running aquaplanet and drycore simulations with CESM on Cheyenne.
 
-Environment
-***********
+Installation
+************
 
-Environment variables are defined in `idealplanets/environment.py`.
-
-Initialize
-**********
+Edit environment configuration:
 
 .. code-block:: bash
 
+    cd spring_onset
+    cp idealplanets/environment/config.py my_config.py
+    vim my_config.json
+
+Configuration can be in either .py or .json format. Follow the required
+variables from config.py. Easiest is just to edit the my_config.py file and
+not convert to json.
+
+Install package:
+
+.. code-block:: bash
+
+    cd spring_onset
     pip install -e .
-    bash go.sh
+    bash ./go.sh
+
+This go script kicks off scripts from the scripts directory and requires
+the my_config.py file. Pip has trouble installing PyNIO so this package may
+need to be installed manually with conda.
 
 Preprocessing
 *************

@@ -1,65 +1,79 @@
-import idealplanets.environment as env
+"""Plot field"""
+import os
+import sys
 
-import os,sys
-import argparse
-
-parser=argparse.ArgumentParser(description="Plot CESM field")
-parser.add_argument('-infile',required=True,type=str)
-parser.add_argument('-outdir',default="%s/figs"%(env.SCRATCH_DIR),type=str)
-parser.add_argument('-field',default="Z3",type=str)
-parser.add_argument('-level',default=250,type=int)
-parser.add_argument('-substeps',default=1,type=int)
-parser.add_argument('-avg',default=False,action='store_true')
-parser.add_argument('-gif',default=False,action='store_true')
-parser.add_argument('-drycore',default=False,action='store_true')
-parser.add_argument('-aqua',default=False,action='store_true')
-parser.add_argument('-skip_figs',default=False,action='store_true')
-parser.add_argument('-anomaly',default=False,action='store_true')
-parser.add_argument('-control',default=False,action='store_true')
-parser.add_argument('-spectrum',default=False,action='store_true')
+from idealplanets.environment import EnvironmentConfig
+from idealplanets import plot_field_argparse
 
 
-args=parser.parse_args()
+if __name__ == '__main__':
+    parser = plot_field_argparse()
+    args = parser.parse_args()
+    config = EnvironmentConfig(args.config)
 
-case_name=(args.infile).split('/')[-1]
-tmp=case_name.split('.cam')
-case_name=tmp[0]
-suffix='cam'+tmp[1]
+    if args.outdir is None:
+        args.outdir = "%s/figs" % (config.SCRATCH_DIR)
 
-if "drycore" in case_name: args.drycore=True
-if "aqua" in case_name: args.aqua=True
+    case_name = (args.infile).split('/')[-1]
+    tmp = case_name.split('.cam')
+    case_name = tmp[0]
+    suffix = 'cam' + tmp[1]
 
-if args.drycore: 
-    case_type="drycore"
-elif args.aqua: 
-    case_type="aqua"
-else:
-    print("Select valid case type\n")
-    exit()
+    if "drycore" in case_name:
+        args.drycore = True
+    if "aqua" in case_name:
+        args.aqua = True
 
-if args.control:
-    case_name=case_type+"_control"
+    if args.drycore:
+        case_type = "drycore"
+    elif args.aqua:
+        case_type = "aqua"
+    else:
+        print("Select valid case type\n")
+        sys.exit()
 
-args.outdir+="/%s/" %(case_name)
+    if args.control:
+        case_name = case_type + "_control"
 
-base_sst_file="%s/%s"%(env.CESM_DATA_DIR,env.BASE_SST_FILE)
-base_tref_file="%s/%s"%(env.CESM_DATA_DIR,env.BASE_TREF_FILE)
-anomaly_file="%s/%s.nc"%(env.CESM_DATA_DIR,case_name)
-control_file="%s/cases/archive/%s_control/atm/hist/%s_control.%s"%(env.SCRATCH_DIR,case_type,case_type,suffix)
+    args.outdir += "/%s/" % (case_name)
 
-cmd='module load ncl/6.6.2'
-cmd+="; mkdir -p %s" %(args.outdir)
+    base_sst_file = "%s/%s" % (config.CESM_DATA_DIR, config.BASE_SST_FILE)
+    base_tref_file = "%s/%s" % (config.CESM_DATA_DIR, config.BASE_TREF_FILE)
+    anomaly_file = "%s/%s.nc" % (config.CESM_DATA_DIR, case_name)
+    control_file = "%s/cases/archive/%s_control/atm/hist/%s_control.%s"
+    control_file = control_file % (config.SCRATCH_DIR, case_type, case_type,
+                                   suffix)
 
-if not args.avg:
-    cmd+="; rm -rf %s/%s_%s_%s_*.png" %(args.outdir,args.field,args.level,case_name)
+    cmd = 'module load ncl/6.6.2'
+    cmd += "; mkdir -p %s" % (args.outdir)
 
-if not args.skip_figs:
-    cmd+='; ncl \'outdir="%s"\' \'AVG="%s"\' \'ANOMALY="%s"\' \'CONTROL="%s"\' \'cfile="%s"\' \'infile="%s"\' \'case_name="%s"\' \'case_type="%s"\' \'field="%s"\' level=%s substeps=%s \'anomaly_file="%s"\' \'base_sst_file="%s"\' \'base_tref_file="%s"\'   %s/plot_field.ncl' %(args.outdir,args.avg,args.anomaly,args.control,control_file,args.infile,case_name,case_type,args.field,args.level,args.substeps,anomaly_file,base_sst_file,base_tref_file,env.POST_PROC_DIR)
+    if not args.avg:
+        cmd += "; rm -rf %s/%s_%s_%s_*.png" % (args.outdir, args.field,
+                                               args.level, case_name)
 
-if args.gif and not args.avg:
-    cmd+='; convert -delay 20 -loop 0 %s/%s_%s_%s_*.png %s/%s_%s_%s.gif'%(args.outdir,args.field,args.level,case_name,args.outdir,args.field,args.level,case_name)
+    if not args.skip_figs:
+        cmd += '; ncl \'outdir="%s"\' \'AVG="%s"\' \'ANOMALY="%s"\' '
+        cmd += '\'CONTROL="%s"\' \'cfile="%s"\' \'infile="%s"\' '
+        cmd += '\'case_name="%s"\' \'case_type="%s"\' \'field="%s"\' '
+        cmd += 'level=%s substeps=%s \'anomaly_file="%s"\' '
+        cmd += '\'base_sst_file="%s"\' \'base_tref_file="%s"\'   '
+        cmd += '%s/plot_field.ncl'
+        cmd = cmd % (args.outdir, args.avg, args.anomaly, args.control,
+                     control_file, args.infile, case_name, case_type,
+                     args.field, args.level, args.substeps, anomaly_file,
+                     base_sst_file, base_tref_file, config.POST_PROC_DIR)
 
-if args.spectrum:
-    cmd+='; ncl \'ANOMALY="%s"\' \'CONTROL="%s"\' \'outdir="%s"\' \'cfile="%s"\' \'infile="%s"\' \'case_name="%s"\' \'field="%s"\' level=%s %s/plot_spectrum.ncl' %(args.anomaly,args.control,args.outdir,control_file,args.infile,case_name,args.field,args.level,env.POST_PROC_DIR)
+    if args.gif and not args.avg:
+        cmd += '; convert -delay 20 -loop 0 %s/%s_%s_%s_*.png %s/%s_%s_%s.gif'
+        cmd = cmd % (args.outdir, args.field, args.level, case_name,
+                     args.outdir, args.field, args.level, case_name)
 
-os.system(cmd)    
+    if args.spectrum:
+        cmd += '; ncl \'ANOMALY="%s"\' \'CONTROL="%s"\' \'outdir="%s"\' '
+        cmd += '\'cfile="%s"\' \'infile="%s"\' \'case_name="%s"\' '
+        cmd += '\'field="%s"\' level=%s %s/plot_spectrum.ncl'
+        cmd = cmd % (args.anomaly, args.control, args.outdir, control_file,
+                     args.infile, case_name, args.field, args.level,
+                     config.POST_PROC_DIR)
+
+    os.system(cmd)

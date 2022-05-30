@@ -129,3 +129,40 @@ def inject_argparse():
     parser.add_argument('-anomaly_lon', type=float, default=0.0)
     parser.add_argument('-config', required=True)
     return parser
+
+
+def init_basefile_argparse():
+    """Parse args for initializing basefiles which are used for injections"""
+    parser = argparse.ArgumentParser(description="Initialize base file")
+    parser.add_argument('-aqua', default=False, action='store_true')
+    parser.add_argument('-drycore', default=False, action='store_true')
+    parser.add_argument('-drycore_topo', default=False, action='store_true')
+    parser.add_argument('-config', required=True)
+    return parser
+
+
+def init_cesm_argparse():
+    """Parse args for initializing cesm"""
+    parser = argparse.ArgumentParser(description="Initialize CESM")
+    parser.add_argument('-config', required=True)
+    return parser
+
+
+def plot_field_argparse():
+    """Parse args for field plot"""
+    parser = argparse.ArgumentParser(description="Plot CESM field")
+    parser.add_argument('-infile', required=True, type=str)
+    parser.add_argument('-outdir', default=None)
+    parser.add_argument('-field', default="Z3", type=str)
+    parser.add_argument('-level', default=250, type=int)
+    parser.add_argument('-substeps', default=1, type=int)
+    parser.add_argument('-avg', default=False, action='store_true')
+    parser.add_argument('-gif', default=False, action='store_true')
+    parser.add_argument('-drycore', default=False, action='store_true')
+    parser.add_argument('-aqua', default=False, action='store_true')
+    parser.add_argument('-skip_figs', default=False, action='store_true')
+    parser.add_argument('-anomaly', default=False, action='store_true')
+    parser.add_argument('-control', default=False, action='store_true')
+    parser.add_argument('-spectrum', default=False, action='store_true')
+    parser.add_argument('-config', required=True)
+    return parser
