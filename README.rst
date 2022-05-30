@@ -11,7 +11,7 @@ Documentation
 Initialization
 ==============
 
-After following the installation instructions `here <https://bnb32.github.io/spring_onset/install.html>`_:
+After following the installation instructions `here <https://bnb32.github.io/spring_onset/misc/install.html>`_:
 
 Edit environment configuration:
 

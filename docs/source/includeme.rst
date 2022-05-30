@@ -1,3 +1,1 @@
-Idealplanets
-************
 .. include:: ../../README.rst
