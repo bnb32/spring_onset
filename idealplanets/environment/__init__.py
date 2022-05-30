@@ -11,12 +11,12 @@ class EnvironmentConfig:
     USERNAME = None
     NETID = None
     PROJECT_CODE = None
-    MAIN_DIR = None
+    MAIN_DIR = '/tmp'
 
     MY_CESM_DIR = MAIN_DIR + '/my_cesm'
     POST_PROC_DIR = MAIN_DIR + '/idealplanets/postprocessing/'
     PRE_PROC_DIR = MAIN_DIR + '/idealplanets/preprocessing/'
-    SCRATCH_DIR = '/glade/scratch/' + USERNAME + '/'
+    SCRATCH_DIR = f'/glade/scratch/{USERNAME}/'
     CIME_OUTPUT_ROOT = SCRATCH_DIR + '/cases/'
     CESM_DATA_DIR = SCRATCH_DIR + '/cesm_data/'
     CESM_SCRIPTS = MY_CESM_DIR + '/cime/scripts/'

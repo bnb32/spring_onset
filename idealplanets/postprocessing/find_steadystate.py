@@ -18,7 +18,7 @@ if __name__ == '__main__':
     case_name = (args.infile).split('/')[-1]
     tmp = case_name.split('.cam')
     case_name = tmp[0]
-    suffix = 'cam' + tmp[1]
+    suffix = f'cam{tmp[1]}'
     args.outdir += "/%s/" % (case_name)
 
     if args.drycore:
